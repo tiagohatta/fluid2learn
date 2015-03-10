@@ -12,14 +12,34 @@ import pt.c01interfaces.s01knowledge.s01base.inter.IObjetoConhecimento;
 
 public class BaseConhecimento implements IBaseConhecimento
 {
-
+<<<<<<< HEAD
 	public static final String DIRETORIO_RELATIVO = "../../s02app/bd",
+<<<<<<< HEAD
+			EXTENSAO = ".txt";
+			String diretorio = BaseConhecimento.class.getResource(DIRETORIO_RELATIVO).getPath();
+			
+    public String[] listaNomes()
+    {
+        File diretorioRaiz = new File(diretorio);
+=======
+||||||| merged common ancestors
+	public static final String DIRETORIO_RAIZ = "/Users/Andre/Dropbox/ensino/poo/eclipse/fluid2learn/bin/pt/c01interfaces/s01knowledge/s02app/bd/",
+=======
+	public static final String DIRETORIO_RELATIVO = "../../s02app/bd",
+>>>>>>> 044f0ddc32fb2da92fe9acba0274de244a3009df
 	                           EXTENSAO = ".txt";
 	String diretorio = BaseConhecimento.class.getResource(DIRETORIO_RELATIVO).getPath();
 	
     public String[] listaNomes()
     {
+<<<<<<< HEAD
     	File diretorioRaiz = new File(diretorio);
+>>>>>>> 044f0ddc32fb2da92fe9acba0274de244a3009df
+||||||| merged common ancestors
+        File diretorioRaiz = new File(DIRETORIO_RAIZ);
+=======
+    	File diretorioRaiz = new File(diretorio);
+>>>>>>> 044f0ddc32fb2da92fe9acba0274de244a3009df
         
         String lista[] = diretorioRaiz.list();
         Vector<String> listaFiltrada = new Vector<String>();
