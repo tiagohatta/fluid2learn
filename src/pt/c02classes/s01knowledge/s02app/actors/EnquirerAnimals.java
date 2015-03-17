@@ -66,5 +66,7 @@ public class EnquirerAnimals implements IEnquirer {
 			System.out.println("Oba! Acertei!");
 		else
 			System.out.println("fuem! fuem! fuem!");	
+	
+		return acertei;
 	}	
 }
