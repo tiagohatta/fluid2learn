@@ -23,7 +23,7 @@
       <ownedParameter xmi:id="_pOz4INC8EeS4MankXkopKg" name="responder" type="_IrUfINC5EeS4MankXkopKg"/>
     </ownedOperation>
     <ownedOperation xmi:id="_r5nRgNC8EeS4MankXkopKg" name="boolean discover"/>
-    <ownedOperation xmi:id="_ymYrgNC8EeS4MankXkopKg" name="boolean resolveLab"/>
+    <ownedOperation xmi:id="_ymYrgNC8EeS4MankXkopKg" name="boolean procuraSaida"/>
     <ownedReception xmi:id="_qmCJwNC8EeS4MankXkopKg" name="Reception1"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_5VY6INC8EeS4MankXkopKg" name="ResponderMaze">
@@ -177,6 +177,47 @@
     <ownedOperation xmi:id="_YG1w8NDEEeS4MankXkopKg" name="finalAnswer">
       <ownedParameter xmi:id="_bGqYENDEEeS4MankXkopKg" name="answer">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_9gLuQNF6EeSDXZ6riLT0Cw" name="Class1">
+    <ownedAttribute xmi:id="_Be3xYNF7EeSDXZ6riLT0Cw" name="Property1"/>
+    <ownedOperation xmi:id="_BAArINF7EeSDXZ6riLT0Cw" name="Operation1"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_fUWW4NF8EeSDXZ6riLT0Cw" name="EnquirerMineswepper">
+    <generalization xmi:id="_dswUsNGBEeSDXZ6riLT0Cw" general="_4cwl0NC4EeS4MankXkopKg"/>
+    <ownedOperation xmi:id="_djnuMNF-EeSDXZ6riLT0Cw" name="boolean "/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="__dVaoNF-EeSDXZ6riLT0Cw" name="ResponderMineswepper">
+    <generalization xmi:id="_3klDwNGAEeSDXZ6riLT0Cw" general="_AqgpYNDEEeS4MankXkopKg"/>
+    <ownedAttribute xmi:id="_DE4JENF_EeSDXZ6riLT0Cw" name="char:  mineMatrix" visibility="private"/>
+    <ownedAttribute xmi:id="_IqUuoNF_EeSDXZ6riLT0Cw" name="linhaAtual" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_mqPfANF_EeSDXZ6riLT0Cw" name="colunaAtual" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_uK-FgNF_EeSDXZ6riLT0Cw" name="numBombas" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_ynYmcNF_EeSDXZ6riLT0Cw" name="nElementos" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_XRqLcNF_EeSDXZ6riLT0Cw" name="ResponderMineswepper">
+      <ownedParameter xmi:id="_PqLx0NGBEeSDXZ6riLT0Cw" name="estatisticas">
+        <type xmi:type="uml:Class" href="enq_resp_generic.uml#_YLBqMNDAEeS4MankXkopKg"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_StKaoNGBEeSDXZ6riLT0Cw" name="mine">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_tNLAgNF_EeSDXZ6riLT0Cw" name="Operation1"/>
+    <ownedOperation xmi:id="_IYW_cNGAEeSDXZ6riLT0Cw" name="revelaVazios" visibility="private">
+      <ownedParameter xmi:id="_aumhgNGBEeSDXZ6riLT0Cw" name="x">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_cJLpINGBEeSDXZ6riLT0Cw" name="y">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
       </ownedParameter>
     </ownedOperation>
   </packagedElement>

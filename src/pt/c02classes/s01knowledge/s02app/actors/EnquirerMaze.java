@@ -4,37 +4,36 @@ import java.util.*;
 import pt.c02classes.s01knowledge.s01base.inter.IEnquirer;
 import pt.c02classes.s01knowledge.s01base.inter.IResponder;
 
-
-class posicao{
-	public int X,Y;
-	
-	public posicao(int X, int Y){
-		this.X = X;
-		this.Y = Y;
-	}
-
-	public posicao(posicao ponto, int X, int Y){
-		this.X = ponto.X + X;
-		this.Y = ponto.Y + Y;
-	}
-	
-	public boolean posicoesIguais(posicao ponto)
-	{	  
-		if((ponto.X == this.X) && (ponto.Y == this.Y))		
-			return true;
-		
-		return false;
-		
-	}
-	
-}
-
 public class EnquirerMaze implements IEnquirer {
-
+	
 	IResponder responder;
 	
 	// pilha com posicoes ja passadas
 	Stack<posicao> jaPassou;
+	
+private	class posicao{
+		public int X,Y;
+		
+		public posicao(int X, int Y){
+			this.X = X;
+			this.Y = Y;
+		}
+
+		public posicao(posicao ponto, int X, int Y){
+			this.X = ponto.X + X;
+			this.Y = ponto.Y + Y;
+		}
+		
+		public boolean posicoesIguais(posicao ponto)
+		{	  
+			if((ponto.X == this.X) && (ponto.Y == this.Y))		
+				return true;
+			
+			return false;
+			
+		}
+		
+	}
 	
 	public void connect(IResponder responder) {
 		this.responder = responder;
@@ -44,7 +43,7 @@ public class EnquirerMaze implements IEnquirer {
 		
 		jaPassou = new Stack<posicao>();
 		jaPassou.push(new posicao(0,0));
-		if(resolveLab())
+		if(procuraSaida())
 		{	
 		
 			System.out.println("A saida foi encontrada!");
@@ -54,7 +53,7 @@ public class EnquirerMaze implements IEnquirer {
 			return false;
 	}
 	
-	public boolean resolveLab(){
+	public boolean procuraSaida(){
 		
 		Enumeration<posicao> elements = jaPassou.elements();
 		posicao mp = elements.nextElement();
@@ -83,7 +82,7 @@ public class EnquirerMaze implements IEnquirer {
 			jaPassou.push(new posicao(jaPassou.peek(),0,1));
 
 			// recursividade
-			if (resolveLab() == true){
+			if (procuraSaida() == true){
 				return true;
 			}else{
 				// caso entre em um caminho "sem saida", vai voltando ate encontrar outro caminho viavel
@@ -96,7 +95,7 @@ public class EnquirerMaze implements IEnquirer {
 			responder.move("leste");		
 			jaPassou.push(new posicao(jaPassou.peek(),1,0));
 		
-			if (resolveLab() == true){
+			if (procuraSaida() == true){
 				return true;
 			}
 			else{
@@ -108,7 +107,7 @@ public class EnquirerMaze implements IEnquirer {
 			responder.move("sul");
 			jaPassou.push(new posicao(jaPassou.peek(),0,-1));
 	
-			if (resolveLab() == true){
+			if (procuraSaida() == true){
 				return true;
 			}else{
 				responder.move("norte");
@@ -120,7 +119,7 @@ public class EnquirerMaze implements IEnquirer {
 			responder.move("oeste");
 			jaPassou.push(new posicao(jaPassou.peek(),-1,0));
 
-			if (resolveLab() == true){
+			if (procuraSaida() == true){
 				return true;
 			}
 			else{
