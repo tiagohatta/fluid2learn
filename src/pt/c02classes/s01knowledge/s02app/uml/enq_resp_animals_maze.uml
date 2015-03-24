@@ -8,10 +8,10 @@
   </packageImport>
   <packagedElement xmi:type="uml:Class" xmi:id="_4cwl0NC4EeS4MankXkopKg" name="EnquirerGeneric">
     <ownedAttribute xmi:id="_XDKR8NC6EeS4MankXkopKg" name="responder" visibility="private" type="_IrUfINC5EeS4MankXkopKg"/>
-    <ownedOperation xmi:id="_XoqoMNC5EeS4MankXkopKg" name="void connect" visibility="public">
+    <ownedOperation xmi:id="_XoqoMNC5EeS4MankXkopKg" name="connect" visibility="public">
       <ownedParameter xmi:id="_45IjUNC5EeS4MankXkopKg" name="responder" type="_IrUfINC5EeS4MankXkopKg" effect="update"/>
     </ownedOperation>
-    <ownedOperation xmi:id="_hvXV8NC6EeS4MankXkopKg" name="boolean discover"/>
+    <ownedOperation xmi:id="_hvXV8NC6EeS4MankXkopKg" name="discover"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_IrUfINC5EeS4MankXkopKg" name="IResponder"/>
   <packagedElement xmi:type="uml:DataType" xmi:id="_NJM_sNC5EeS4MankXkopKg" name="DataType1"/>
@@ -23,7 +23,7 @@
       <ownedParameter xmi:id="_pOz4INC8EeS4MankXkopKg" name="responder" type="_IrUfINC5EeS4MankXkopKg"/>
     </ownedOperation>
     <ownedOperation xmi:id="_r5nRgNC8EeS4MankXkopKg" name="boolean discover"/>
-    <ownedOperation xmi:id="_ymYrgNC8EeS4MankXkopKg" name="boolean procuraSaida"/>
+    <ownedOperation xmi:id="_ymYrgNC8EeS4MankXkopKg" name="procuraSaida"/>
     <ownedReception xmi:id="_qmCJwNC8EeS4MankXkopKg" name="Reception1"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_5VY6INC8EeS4MankXkopKg" name="ResponderMaze">
@@ -163,13 +163,13 @@
   <packagedElement xmi:type="uml:Abstraction" xmi:id="_wv8qINDDEeS4MankXkopKg" name="Abstraction1" supplier="_4cwl0NC4EeS4MankXkopKg" client="_eVT60NDDEeS4MankXkopKg"/>
   <packagedElement xmi:type="uml:Class" xmi:id="_AqgpYNDEEeS4MankXkopKg" name="ResponderGeneric">
     <ownedAttribute xmi:id="_DneJwNDEEeS4MankXkopKg" name="obj" visibility="private" type="_VYy6gNC9EeS4MankXkopKg"/>
-    <ownedOperation xmi:id="_KJTfENDEEeS4MankXkopKg" name="String scenario"/>
-    <ownedOperation xmi:id="_OlU-cNDEEeS4MankXkopKg" name="String ask">
+    <ownedOperation xmi:id="_KJTfENDEEeS4MankXkopKg" name="scenario"/>
+    <ownedOperation xmi:id="_OlU-cNDEEeS4MankXkopKg" name="ask">
       <ownedParameter xmi:id="_SN9SANDEEeS4MankXkopKg" name="question">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedParameter>
     </ownedOperation>
-    <ownedOperation xmi:id="_TTxqkNDEEeS4MankXkopKg" name="boolean move">
+    <ownedOperation xmi:id="_TTxqkNDEEeS4MankXkopKg" name="move">
       <ownedParameter xmi:id="_Wj9o8NDEEeS4MankXkopKg" name="direction">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedParameter>
@@ -190,6 +190,8 @@
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="__dVaoNF-EeSDXZ6riLT0Cw" name="ResponderMineswepper">
     <generalization xmi:id="_3klDwNGAEeSDXZ6riLT0Cw" general="_AqgpYNDEEeS4MankXkopKg"/>
+    <generalization xmi:id="_jT_wUNJNEeSUO6MhX_2eLA" general="_5VY6INC8EeS4MankXkopKg"/>
+    <generalization xmi:id="_zGMBQNJOEeSUO6MhX_2eLA" general="_AqgpYNDEEeS4MankXkopKg"/>
     <ownedAttribute xmi:id="_DE4JENF_EeSDXZ6riLT0Cw" name="char:  mineMatrix" visibility="private"/>
     <ownedAttribute xmi:id="_IqUuoNF_EeSDXZ6riLT0Cw" name="linhaAtual" visibility="private">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
@@ -212,7 +214,7 @@
       </ownedParameter>
     </ownedOperation>
     <ownedOperation xmi:id="_tNLAgNF_EeSDXZ6riLT0Cw" name="Operation1"/>
-    <ownedOperation xmi:id="_IYW_cNGAEeSDXZ6riLT0Cw" name="revelaVazios" visibility="private">
+    <ownedOperation xmi:id="_IYW_cNGAEeSDXZ6riLT0Cw" name="revelaVazios" visibility="public">
       <ownedParameter xmi:id="_aumhgNGBEeSDXZ6riLT0Cw" name="x">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
       </ownedParameter>
